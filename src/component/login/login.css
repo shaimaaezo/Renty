@@ -1,0 +1,258 @@
+/* Colors & fonts */
+:root {
+  --purple1: #a685e2;
+  --purple2: #6155a6;
+  --logo:#955ba5;
+  --grey: #C3C3D8;
+
+  --font:'Quicksand', sans-serif;
+}
+
+ .message, .form, form {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.body {
+font-family:var(--font);
+height: 100vh;
+/* background: #E8E8E8; */
+/* overflow: hidden;*/
+text-align: -webkit-center;
+padding-top: 65px;
+background-image: url(/src/imgs/bg.jpg);
+}
+.form-container{
+width: 800px;
+height: 500px;
+background: white;
+position: relative;
+display: grid;
+grid-template: 100% / 50% 50%;
+box-shadow: 0 0 20px 0 var(--grey), 0 5px 5px 0 var(--grey);
+border-radius: 5px;
+}
+
+.hide{
+display:none;
+}
+.show{
+display:block;
+}
+.form-container h3{
+margin-bottom: 3rem;
+}
+
+.message {
+position: absolute;
+background: white;
+width: 50%;
+height: 100%;
+transition: 0.5s all ease;
+transform: translateX(100%);
+z-index: 4;
+border-radius: 5px;
+}
+
+.message::before {
+position: absolute;
+content: '';
+width: 1px;
+height: 70%;
+background: var(--purple1);
+opacity: 0;
+left: 0;
+top:15%;
+}
+
+.message .button {
+margin: 5px 0;
+}
+
+
+.signup::before {
+  opacity: 0.3;
+  left: 0;
+}
+
+.login::before {
+opacity: 0.3;
+left: 100%;
+}
+
+
+.btn-wrapper {
+width: 60%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.form-logo{
+margin-bottom: 30px;
+width:50px;
+}
+
+.login-form {
+width: 75%;
+}
+
+.mainInput {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid var(--grey);
+  font-size: 13px;
+  font-weight: 300;
+  color: #797A9E;
+  letter-spacing: 0.11em;
+  margin: 10px;
+  line-height: 1.75;
+}
+
+.mainInput:focus {
+outline: 0;
+border-bottom: 1px solid var(--purple2);
+transition: 0.6s all ease;
+}
+.mainInput::-webkit-input-placeholder {
+font-family:'Quicksand', sans-serif;
+}
+.mainInput:-ms-input-placeholder {
+font-family: 'Quicksand', sans-serif;
+}
+.mainInput:-moz-placeholder {
+font-family: 'Quicksand', sans-serif;
+}
+.mainInput::-moz-placeholder {
+font-family: 'Quicksand', sans-serif;
+}
+
+.btn-show-pass {
+    font-size: 15px;
+    color: #999999;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 310px;
+    right: 470px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+.btn-show-pass:hover{
+color: var(--purple1);
+}
+.button {
+width: 100%;
+height: 38px;
+border: 0;
+outline: 0;
+color: white;
+font-size: 1rem;
+font-weight: 400;
+position: relative;
+z-index: 3;
+letter-spacing: 2px;
+background: linear-gradient(45deg, var(--logo), var(--purple1));
+cursor: pointer;
+margin-top: 40px;
+font-family: 'Quicksand', sans-serif;
+border-radius: 3px;
+}
+.button:hover{
+/* background: #fff;
+color: var(--purple1);
+border: 1px solid var(--purple1); */
+-webkit-box-shadow: 0 5px 20px -7px rgba(0, 0, 0, 0.9) !important;
+  box-shadow: 0 5px 20px -7px rgba(0, 0, 0, 0.9) !important;
+  top: -2px;
+
+}
+
+.divider{
+margin: 15px 0;
+color: #999999;
+}
+.divider::before {
+ position: absolute;
+  content: '';
+  top: 81%;
+  left: 20px;
+  right: 77%;
+  width: 165px;
+  height: 1.2px;
+  background-color: var(--grey);
+}
+
+.divider::after {
+position: absolute;
+  content: '';
+  top: 81%;
+  left: 27%;
+  right: 0;
+  height: 1.2px;
+  width: 165px;
+  background-color: var(--grey);
+}
+
+.divider2{
+margin: 15px 0;
+color: #999999;
+}
+.divider2::before {
+  position: absolute;
+  content: '';
+  top: 72%;
+  left: 52%;
+  right: 0;
+  height: 1.2px;
+  width: 165px;
+  background-color: var(--grey);
+}
+.divider2::after {
+  position: absolute;
+  content: '';
+  top: 72%;
+  left: 613px;
+  right: 269%;
+  right: 78%;
+  width: 165px;
+  height: 1.2px;
+  background-color: var(--grey);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  height: 37px;
+  align-items: center;
+  width: 125%;
+}
+.facebook-btn,.gmail-btn {
+display: flex;
+    justify-content: space-around;
+    border: 1.2px solid var(--grey);
+    border-radius: 3px;
+    height: 37px;
+    align-items: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 15px;
+
+}
+.gmail-btn{
+margin-right: 10px;
+}
+.gmail-btn img {
+  width: 20px;
+}
+.facebook-btn img {
+  width: 20px;
+}
+
+@media (max-width: 750px){
+.form-container {
+  transform: scale(0.8);
+}
+}

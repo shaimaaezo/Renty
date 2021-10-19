@@ -1,0 +1,129 @@
+/* Colors & fonts */
+:root {
+    --purple1: #a685e2;
+    --purple2: #6155a6;
+    --logo:#955ba5;
+    --grey: #C3C3D8;
+    --bg: #F7F7F7;
+
+    --font:'Quicksand', sans-serif;
+    --fontheading:'Lobster', sans-serif;
+}
+body {
+  font-family:var(--font);
+  background-color: var(--bg);
+}
+
+/*============================== navbar ============================*/
+.dropdown-toggle::after {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    display: none;
+}
+.profile-dropdown-menu {
+    left: -45px;
+}
+.nav-admin-name{
+  color: #cccccc;
+}
+.nav-admin-name:hover{
+  color: #fff;
+}
+.profile-btn:focus{
+  border: 0px !important;
+  box-shadow: 0 0 0 0.2rem transparent;
+}
+
+#body-row {
+    margin-left:0;
+    margin-right:0;
+}
+#sidebar-container {
+    min-height: 100vh;
+    background-color: #333;
+    padding: 0;
+}
+
+/* Sidebar sizes when expanded and expanded */
+.sidebar-expanded {
+    width: 230px;
+}
+.sidebar-collapsed {
+    width: 60px;
+}
+
+/* Menu item*/
+#sidebar-container .list-group a {
+    height: 50px;
+    color: white;
+}
+
+/* Submenu item*/
+#sidebar-container .list-group .sidebar-submenu a {
+    height: 45px;
+    padding-left: 30px;
+}
+.sidebar-submenu {
+    font-size: 0.9rem;
+}
+
+/* Separators */
+.sidebar-separator-title {
+    background-color: #333;
+    height: 35px;
+}
+.sidebar-separator {
+    background-color: #333;
+    height: 25px;
+}
+.logo-separator {
+    background-color: #333;
+    height: 60px;
+}
+
+/* Closed submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+  content: " \f0d7";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 10px;
+}
+/* Opened submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+  content: " \f0da";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 10px;
+}
+
+
+
+/*=================== main content ==========================================*/
+
+/* cards */
+.card-icon{
+  font-size: 35px;
+}
+.card-text h5{
+  font-weight: 600;
+  color: #545454;
+}
+.min-card1,.min-card2,.min-card3,.min-card4{
+  border:none;
+}
+.min-card1{
+    border-left:3px solid #17a2b8;
+}
+.min-card2{
+    border-left:3px solid #28a745;
+}
+.min-card3{
+    border-left:3px solid #ffc107;
+}
+.min-card4{
+    border-left:3px solid #dc3545;
+}
